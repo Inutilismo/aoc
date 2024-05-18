@@ -22,7 +22,6 @@ for game in input:
     power_sum = 0
 
     for set in game.split(":")[1].split(";"):
-        
         for cube in set.split(","):
             number_of_cubes = int("".join([number for number in cube if number.isnumeric()]))
             color = [color for color in bag if color in cube][0]
@@ -42,6 +41,6 @@ for game in input:
     if possible:
         true_id_sum += int(game_id)
 
-print("part 1 result: ", true_id_sum)
-print("part 2 result: ", final_power_sum)
+print("possible game ids sum: ", true_id_sum)
+print("games power sum: ", final_power_sum)
     
